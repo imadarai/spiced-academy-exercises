@@ -14,6 +14,7 @@ function sum(){
         totalSum += arguments[i];
     }
     console.log("Total Sum of Arguements is" + " " + totalSum);
+    return totalSum;
 
 }
 

@@ -11,17 +11,17 @@
 
 function oneMillion(input){
 
-    if (input <= 0 || Number.isNaN(input) === true || typeof input === 'string' ){
-        return 'Error';
+    if (input >= 1) {
 
-    } else if(input > 0 && input <1000000) {
-        input = input * 10;
-        return oneMillion(input);
+        while ( input < 1000000 ) {
+            input = input * 10;
+        }
 
     } else {
-        return input;
-
+        input = 'Error';
     }
+    return input;
+
 }
 
 
