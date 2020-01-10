@@ -29,6 +29,4 @@ for (var i = 0; i < numbers.length; i++) {
 numbers = { };
 
 //Give numbers a property name y and set the value of double x to Variable
-numbers = {
-    y: doubleX,
-};
+numbers['y']= doubleX;

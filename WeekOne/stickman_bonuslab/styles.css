@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: hotpink; */
+}
+
+#head{
+    position: absolute; //LET ME TELL YOU WHERE TO GO
+    top: 100px;
+    left: 100px;
+    height: 200px;
+    width: 200px;
+    /* background-color: green; */
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.arm {
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    width: 200px;
+    height: 2px;
+    background-color: black;
+}
+
+.arm.left {
+    transform: rotate(225deg);
+    transform-origin: left;
+
+}

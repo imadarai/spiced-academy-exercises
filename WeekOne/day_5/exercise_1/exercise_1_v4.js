@@ -12,28 +12,23 @@
 //
 //  var rect = new Rectangle(4, 5);
 //  rect.getArea(); //20
-
 function Rectangle (width, height) {
     this.width= width ;
     this.height= height ;
-    this.getArea = fnArea;
+    this.getArea = function (){
+        return this.width * this.height;
+    };
 }
 
-function Square (length) {
-    this.width= length;
-    this.height= length;
-    this.getArea = fnArea;
+function Square (sqr){
+    Rectangle.call(this, sqr, sqr);
 }
 
-function fnArea () {
-    var area = this.width * this.height;
-    console.log(area);
-    return area;
-}
+Square.prototype = new Rectangle;
 
 
 //TESTING CODE
 var square = new Square(4);
-square.getArea(); //16
+console.log(square.getArea()); //16
 var rect = new Rectangle(4, 5);
-rect.getArea(); //20
+console.log(rect.getArea()); //20
