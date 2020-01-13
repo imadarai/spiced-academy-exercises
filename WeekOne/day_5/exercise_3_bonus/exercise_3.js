@@ -5,11 +5,17 @@
 //  constructor and logging each number to the console with a one second delay.
 
 
-
-
-
-
-
+function Countdown(seconds) {
+    this.start = function() {
+        setTimeout( function countCycle () {
+            if (seconds >= 0) {
+                console.log(seconds);
+                seconds --;
+                setTimeout(countCycle, 1000);
+            }
+        }, 1000);
+    };
+}
 
 
 //Testing Code
