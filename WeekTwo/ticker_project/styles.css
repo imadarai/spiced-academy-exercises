@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+#ticker {
+    overflow-x: hidden;
+    width: 100%;
+    border-bottom: 3px tomato dotted;
+    white-space: nowrap;
+    left: 50%;
+    height: 1.5em;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+#headlines {
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+
+
+
+}
+
+#headlines a {
+    padding-right: 50px
+
+}
