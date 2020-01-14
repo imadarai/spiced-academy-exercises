@@ -1,26 +1,60 @@
 (function(){
-    var headlines = document.getElementID('headlines');
-    //Getting links from html
-    var links = headlines.getElementsByTagNames('A');
 
-    //starting position
-    var left = headlines.offsetLeft;
+    //Grabbing Container Headline to animate
+    var divContainer = document.getElementById('headlines');
+    //Grabbing all the links inside the headline div
+    var allLinks = divContainer.getElementsByTagName('a');
+    //This is my start point on the viewport where my div is starting - extreme left
+    var startPoint = divContainer.offsetLeft;
 
-    console.log(left);
+    var requestID ;
 
-    moveHeadlines();
 
-    function moveHeadlines() {
-        left --;
 
-        //Increase the left position by the width of the first headlines before removing the first link.
-        if (left <= - links[0].offsetwidhth) {
-            //it's time to remove the first link and make it the last
+    //Define Animation funcitont that will move my elements to left
+    function animateLeft (){
+
+        //negative incrementing starting position to animate left
+        divContainer.style.left = startPoint-- + 'px';
+
+        //Logic when first link leaves the screen. Following makes sure its in negative pixels and then triggers the folowing
+        if (startPoint + allLinks[0].offsetWidth <= 0){
+            //Calculate the width of first element and assignt it to a variable
+            var firstLinkWidth = allLinks[0].offsetWidth;
+            //Adjust the starting point by adding it to the firstlink width
+            startPoint += firstLinkWidth;
+            //set the div starting position to the start point plus pixels
+            divContainer.style.left = startPoint + 'px';
+            //remove the first element and attach it to end (only use append, as removal happens automatically)
+            allLinks[0].parentNode.appendChild(allLinks[0]);
         }
-
-        //set style of headlines leement so that the left of css property equales to the left variable
-        console.log(left);
-        requestAnimationFrame(moveHeadlines);
+        //Why is it skipping?  log startPoint to see why it's skipping
+        //console.log(startPoint);
+        requestID = requestAnimationFrame(animateLeft);
     }
+
+    animateLeft ();
+
+
+
+    //EVENT LISTENERS
+
+    //Creating a variable to store all the elements within the div tag
+    var targetDiv = document.getElementById('headlines');
+    // console.log(xyz);\
+
+    //Adding an event listener to cancel Animation
+    targetDiv.addEventListener('mouseover', function () {
+        // console.log('I am here!');
+        cancelAnimationFrame(requestID);
+    });
+
+    //Adding an event listener to restart animation
+    targetDiv.addEventListener('mouseout', function() {
+        animateLeft();
+    });
+
+
+
 
 })();
