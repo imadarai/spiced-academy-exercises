@@ -1,0 +1,71 @@
+* {
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+#gray {
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    margin: 5px;
+    display:flex;
+    justify-content: flex-end;
+}
+
+#orange {
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+}
+
+#black {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    margin: 5px;
+    display:flex;
+    justify-content:flex-end;
+}
+
+#yellow {
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    align-self: flex-end;
+}
+
+#blue {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    margin: 5px;
+    display:flex;
+    justify-content: flex-start;
+}
+
+#green {
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    align-self: flex-end;
+}
+
+#purple {
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    margin: 5px;
+}
+
+#pink {
+    height: 50px;
+    width: 50px;
+    background-color: pink;
+}

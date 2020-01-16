@@ -1,0 +1,32 @@
+#red {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    text-align: center;
+}
+
+#yellow {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+}
+
+#blue {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+#green {
+    height: 200px;
+    width: 100px;
+    background-color: green;
+}
+
+
+#container {
+    height: 100px;
+    display: flex;
+
+    align-items: baseline;
+
+}
