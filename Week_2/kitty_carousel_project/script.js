@@ -15,8 +15,7 @@
             return;
         } else {
             clearTimeout(timer);
-            var touchNext = active +1;
-            moveKitties(touchNext);
+            moveKitties();
         }
 
 

@@ -16,6 +16,11 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    padding-top: 20px;
+    text-align: center;
+}
+
 #kitties {
     height: 600px;
     position: relative;
@@ -54,16 +59,32 @@ h2 {
 }
 
 .dot {
+    width: 0px;
+    height: 0px;
+    border-right: 20px solid transparent;
+    border-top: 20px solid yellow;
+    border-left: 20px solid yellow;
+    border-bottom: 20px solid yellow;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+/* .dot {
     height: 20px;
     width: 20px;
     margin: 0 2px;
     border: 3px white solid;
     border-radius: 100%;
     z-index: 99;
-}
+    cursor: pointer;
+} */
 
 .dot.on {
-     background-color:white;
+     background-color:red;
 }
 
 @media screen and (min-width:100px) and (max-width:900px) {
