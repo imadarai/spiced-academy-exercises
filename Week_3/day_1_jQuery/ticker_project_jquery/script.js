@@ -22,19 +22,22 @@
         divContainer.css ( {
             left: startPoint-- + 'px'
         });
-
+        var firstLinkWidth = $('a').eq(0).outerWidth();
+        console.log(firstLinkWidth);
+        console.log(startPoint);
         //Logic when first link leaves the screen. Following makes sure its in negative pixels and then triggers the folowing
-        if (startPoint + allLinks.eq(0).offset().width <= 0){
-            //Calculate the width of first element and assignt it to a variable
-            var firstLinkWidth = allLinks.eq(0).offset().width;
+        if (startPoint + $('a').eq(0).outerWidth() <= 0){
+
+
             //Adjust the starting point by adding it to the firstlink width
-            startPoint += firstLinkWidth;
+            startPoint = startPoint + firstLinkWidth;
             //set the div starting position to the start point plus pixels
             divContainer.css ( {
                 left: startPoint + 'px'
             });
+
             //remove the first element and attach it to end (only use append, as removal happens automatically)
-            allLinks.eq(0).append(allLinks.eq(0));
+            $('#headlines').append($('a').eq(0));
         }
         //Why is it skipping?  log startPoint to see why it's skipping
         //console.log(startPoint);

@@ -20,7 +20,7 @@
 #headlines {
     white-space: nowrap;
     position: absolute;
-    left: 50%;
+    left: 5%;
 }
 
 #headlines a {
