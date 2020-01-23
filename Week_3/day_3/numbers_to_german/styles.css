@@ -23,4 +23,6 @@ body {
     text-shadow: 2px 2px black;
     font-size: 150px;
     font-family: 'Germania One', cursive;
+    z-index: 10;
+    position: relative;
 }
