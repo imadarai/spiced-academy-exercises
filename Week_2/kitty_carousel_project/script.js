@@ -5,6 +5,7 @@
     var timer;
     var active = 0;
     var transitioningRightNow;
+    var creekSound = new Audio('creek.mp3');
 
     ////////////////////--EVENT LISTENER for Touch Right (BONUS)--////////////////////
 
@@ -52,6 +53,7 @@
         kitties[active].classList.remove('onscreen');
         kitties[active].classList.add('offscreen-left');
         dots[active].classList.remove('on');
+        creekSound.play();
 
         if (typeof next == "undefined") {
             active++;
