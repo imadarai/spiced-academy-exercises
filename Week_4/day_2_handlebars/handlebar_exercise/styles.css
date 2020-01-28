@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    background-color: clean;
+}
+.allcontent {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 10px;
+    width: 320px;
+    height: auto;
+    background-color: wheat;
+    border: 2px dotted lightgray;
+}
+
+img {
+    margin: 10px;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.author-info {
+    margin: 10px;
+}
+
+p {
+    padding-top: 10px;
+
+}
+
+.qoute {
+    font-style: italic;
+}
+
+.died {
+    margin-left: 30px;
+}
+
+span {
+    font-weight: bold;
+}
