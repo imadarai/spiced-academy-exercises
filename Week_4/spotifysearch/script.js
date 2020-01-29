@@ -55,6 +55,13 @@ console.log('Hello Beautiful!!');
 
         var $albumOrArtist = $('select').val();
         var $userInput = $('input[name=user-input]').val();
+
+        if ($userInput.trim().length <= 0 ){
+            resultsText.html("Please Enter a Valid Search Term");
+            resultsText.show();
+            return;
+        }
+
         $.ajax ({
             url: "https://elegant-croissant.glitch.me/spotify",
             method: 'GET',
@@ -64,7 +71,6 @@ console.log('Hello Beautiful!!');
             },
             success: function(response) {
                 response = response.artists || response.albums;
-                console.log($userInput);
 
                 displayResultsText ($userInput, $albumOrArtist, response);
 
