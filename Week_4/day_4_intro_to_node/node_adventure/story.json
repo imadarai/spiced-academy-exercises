@@ -1,0 +1,19 @@
+{
+    "q": "Good Day Detective Knows-It-All - Mr and Mrs Goldens are lying on the floor dead. Your job is to find out what happened?  ARE YOU READY?",
+    "answers": {
+        "yes": {
+            "q": "There is water on the floor.  Where do you go to find out the source of water? Kitchen or Living?",
+            "answers": {
+                "living": {
+                    "q": "As you enter the living room, you see a massive puddle of water.  There is also broken glass on the floor.  It looks like someone smashed something.  What could it be? (Water bottle or fishbowl?)",
+                    "answers": {
+                        "fishbowl": "Bingo! Mr and Mrs Goldens were goldfish. They died because the cat smashed their bowl",
+                        "water bottle": "waterbottle is made out of plastic .... You don't Know-It-All."
+                    }
+                },
+                "kitchen": "There is a cat on the table, chewing something.  You pet the cat and leave the crime scene withoout Knowing-It-All."
+            }
+        },
+        "no": "Not much of a Know It All ...!"
+    }
+}
