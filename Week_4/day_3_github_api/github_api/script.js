@@ -25,6 +25,12 @@ console.log("Hello Beautiful!");
         baseUrl = "https://api.github.com";
         endpoint = `/users/${userToSearch}/repos`;
 
+        //////////////////////////////////////////////////
+        //                                              //
+        //          FIRST AJAX CALL FOR REPO            //
+        //                                              //
+        // ///////////////////////////////////////////////
+
         $.ajax({
             url: baseUrl + endpoint,
             headers: {
@@ -33,8 +39,17 @@ console.log("Hello Beautiful!");
             success: function(response) {
 
                 $('.full-result').html(Handlebars.templates.userId({response}));
+
                 $('.handlebars').on('click', function(e) {
                     var repoLink = e.target.innerText;
+
+                    console.log("I am clicking on: " , e.currentTarget);
+
+                    //////////////////////////////////////////////////
+                    //                                              //
+                    //          SECOND AJAX CALL FOR REPO           //
+                    //                                              //
+                    // ///////////////////////////////////////////////
 
                     $.ajax ({
                         url: `https://api.github.com/repos/${repoLink}/commits`,

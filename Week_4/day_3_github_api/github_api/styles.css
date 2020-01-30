@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: wheat;
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 200px 1fr;
@@ -73,7 +73,7 @@ main {
 }
 
 .handlebars {
-    border-bottom: 3px solid #2ecc71;
+    border-bottom: 3px solid black;
     cursor: pointer;
 }
 
