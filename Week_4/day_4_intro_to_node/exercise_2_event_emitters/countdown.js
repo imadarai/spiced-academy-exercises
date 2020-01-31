@@ -2,17 +2,18 @@ const events = require('events');
 
 function Countdown (secondsToLiftOff){
     this.seconds = secondsToLiftOff;
-    // this.emit('secondElapsed', this.seconds);
+
     this.tick = function(){
-        var self = this;
         if (this.seconds >= 0 ){
+            ///
+            var time = this;
+            setTimeout(function() {
 
-            setTimeout(function(){
-                self.emit('secondElapsed', self.seconds);
+                time.emit('remainingSeconds', time.seconds);
 
-                self.seconds --;
+                time.seconds --;
 
-                self.tick();
+                time.tick();
             },
             1000);
         }

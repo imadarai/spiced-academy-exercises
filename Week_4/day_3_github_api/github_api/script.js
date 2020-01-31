@@ -16,6 +16,9 @@ console.log("Hello Beautiful!");
     let endpoint;
     let $usernameField = $('input[name="username"]');
     let $passwordField = $('input[name="password"]');
+    let $userToSearch = $('input[name="user-to-search"]');
+
+
 
     $('button').on('click', function() {
         username = $usernameField.val();
@@ -39,29 +42,28 @@ console.log("Hello Beautiful!");
             success: function(response) {
 
                 $('.full-result').html(Handlebars.templates.userId({response}));
+            }
+        });
+    });
+    $(".full-result").on('click', ".handlebars", function(e) {
+        var repoLink = $(e.currentTarget).children().eq(0).children().eq(1).text();
 
-                $('.handlebars').on('click', function(e) {
-                    var repoLink = e.target.innerText;
+        console.log("I am clicking on: " , repoLink );
 
-                    console.log("I am clicking on: " , e.currentTarget);
+        //////////////////////////////////////////////////
+        //                                              //
+        //          SECOND AJAX CALL FOR REPO           //
+        //                                              //
+        // ///////////////////////////////////////////////
 
-                    //////////////////////////////////////////////////
-                    //                                              //
-                    //          SECOND AJAX CALL FOR REPO           //
-                    //                                              //
-                    // ///////////////////////////////////////////////
-
-                    $.ajax ({
-                        url: `https://api.github.com/repos/${repoLink}/commits`,
-                        headers: {
-                            Authorization: 'Basic ' + btoa(username + ":" + password)
-                        },
-                        success: function(commits) {
-                            var onlyTen = commits.slice(0,10);
-                            $(e.currentTarget).children(".repo-comments").html(Handlebars.templates.repoData({onlyTen}));
-                        }
-                    });
-                });
+        $.ajax ({
+            url: `https://api.github.com/repos/${repoLink}/commits`,
+            headers: {
+                Authorization: 'Basic ' + btoa(username + ":" + password)
+            },
+            success: function(commits) {
+                var onlyTen = commits.slice(0,10);
+                $(e.currentTarget).children(".repo-comments").html(Handlebars.templates.repoData({onlyTen}));
             }
         });
     });
@@ -78,10 +80,14 @@ console.log("Hello Beautiful!");
     $passwordField.on('input', function(){
         localStorage.setItem('pass', $passwordField.val());
     });
+    $userToSearch.on('input', function(){
+        localStorage.setItem('userToSearch', $userToSearch.val());
+    });
 
     try {
         $usernameField.val(localStorage.getItem("username"));
         $passwordField.val(localStorage.getItem("pass"));
+        $userToSearch.val(localStorage.getItem("userToSearch"));
     }
     catch (err){
         console.log("Error: ", err);
