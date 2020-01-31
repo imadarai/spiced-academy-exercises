@@ -87,4 +87,15 @@ console.log("Hello Beautiful!");
         console.log("Error: ", err);
     }
 
+    //////////////////////////////////////////////////
+    //                                              //
+    //           Press Enter to Search              //
+    //                                              //
+    // ///////////////////////////////////////////////
+    $(document).on('keydown', function (e){
+        if (e.keyCode === 13){
+            $('button').click();
+        }
+    });
+
 }());

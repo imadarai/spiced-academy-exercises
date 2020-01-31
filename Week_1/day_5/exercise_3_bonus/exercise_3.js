@@ -19,5 +19,5 @@ function Countdown(seconds) {
 
 
 //Testing Code
-var countdown = new Countdown(5);
+var countdown = new Countdown(10);
 countdown.start();
