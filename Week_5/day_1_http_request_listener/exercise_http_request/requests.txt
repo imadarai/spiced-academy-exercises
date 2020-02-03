@@ -1,0 +1,10 @@
+	Date: Mon Feb 03 2020 15:18:05 GMT+0100 (Central European Standard Time) 	Method: POST	URL: /	Headers:  [object Object]
+
+	Date: Mon Feb 03 2020 15:18:05 GMT+0100 (Central European Standard Time) 	Method: GET	URL: /	Headers:  [object Object]
+
+	Date: Mon Feb 03 2020 15:18:10 GMT+0100 (Central European Standard Time) 	Method: GET	URL: /	Headers:  [object Object]
+
+	Date: Mon Feb 03 2020 15:18:14 GMT+0100 (Central European Standard Time) 	Method: HEAD	URL: /	Headers:  [object Object]
+
+	Date: Mon Feb 03 2020 15:18:18 GMT+0100 (Central European Standard Time) 	Method: PURGE	URL: /	Headers:  [object Object]
+
