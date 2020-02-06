@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Spotify Search",
+        "directory": "/day_1_spotifysearch/"
+    },
+    {
+        "title": "Git Hub API",
+        "directory": "/github_api/"
+    },
+    {
+        "title": "Incremental Search",
+        "directory": "/IncrementalSearch/"
+    },
+    {
+        "title": "JSON Validator",
+        "directory": "/json_validator/"
+    },
+    {
+        "title": "Image Carousal",
+        "directory": "/kitty_carousel_project/"
+    },
+    {
+        "title": "Local Storage Notes",
+        "directory": "/local_storage/"
+    },
+    {
+        "title": "Translate Numbers to German",
+        "directory": "/numbers_to_german/"
+    },
+    {
+        "title": "Image Panes",
+        "directory": "/panes/"
+    },
+    {
+        "title": "JavaScript Headlines Ticker",
+        "directory": "/ticker/"
+    }
+]
