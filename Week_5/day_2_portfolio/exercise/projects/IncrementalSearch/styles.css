@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-size: 18px;
+    font-family: sans-serif;
+    background-image: url('https://wallpaperplay.com/walls/full/b/6/a/124442.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#search {
+    margin: 20px;
+    width: 300px;
+    height: 50px;
+}
+
+#search-text {
+    background-color: white;
+    height: 50px;
+    font-size: 36px;
+    padding: 8px;
+    border: solid black 2px;
+    border-radius: 15px;
+
+}
+
+#results {
+    font-size: 30px;
+    padding-left: 10px;
+    margin-top: 1px;
+    border: solid black 1px;
+    background-color: white;
+
+}
+
+.active {
+    color: blue;
+    background-color: lightgray;
+}
