@@ -1,0 +1,13 @@
+<nav>
+{{>projectsPartial}}
+</nav>
+
+<div class="description-section">
+    <h1>{{toUpperCase choosenOne.title}}</h1>
+    <img id="project-image" src="/{{choosenOne.directory}}/screenshot.jpg" alt="">
+    <p class="description-text">{{choosenOne.description}}</p>
+    <a href="/{{choosenOne.directory}}/">Launch {{choosenOne.title}}</a>
+    <br>
+    <a href="/">Go Back</a>
+
+</div>

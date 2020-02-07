@@ -15,10 +15,10 @@ header {
     grid-row: 1;
     display: flex;
     justify-content: center;
-    background-image: url('https://i.imgur.com/dKjnntK.gif');
+    /* background-image: url('https://i.imgur.com/dKjnntK.gif');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
 }
 
 #logo {
@@ -49,11 +49,27 @@ main {
     grid-row: 2;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     background-color: #2A2539;
 }
 
 #project {
     padding: 10px;
     margin-top: 30px;
+}
+
+nav {
+    /* justify-content: flex-start; */
+
+}
+
+.description-section {
+
+}
+.description-text{
+    color: white;
+}
+
+.highlight {
+    background-color: pink;
 }

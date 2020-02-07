@@ -10,7 +10,7 @@ const cookieParser = require("cookie-parser");
 const projectsData = require('./data.json');
 //////////////////////////////////////////////////
 //                                              //
-//            EXPRESS WITH HANDLEBARS           //  
+//            EXPRESS WITH HANDLEBARS           //
 //                                              //
 // ///////////////////////////////////////////////
 const hb = require('express-handlebars');
@@ -101,7 +101,6 @@ app.get("/cookie", (req, res) => {
         `);
 });
 
-
 //When User makes a post request on COOKIES PAGE
 app.post("/cookie", (req, res) => {
     console.log(req.body);
@@ -121,9 +120,11 @@ app.post("/cookie", (req, res) => {
             `);
     }
 });
-
-
-console.log(projectsData);
+//////////////////////////////////////////////////
+//                                              //
+//               EXPRESS HANDLEBARS             //
+//                                              //
+// ///////////////////////////////////////////////
 //When User requests homepage or slash(/) URL
 app.get("/", (req, res) => {
     if (!req.cookies["authenticated"]) {
@@ -134,6 +135,38 @@ app.get("/", (req, res) => {
             layout: "main",
             //data we're sending to our 'home' template
             projectsData
+        });
+    }
+});
+//////////////////////////////////////////////////
+//                                              //
+//       EXPRESS HANDLEBARS WITH PARTIAL        //
+//             AND HELPER FUNCTION              //
+// ///////////////////////////////////////////////
+app.get('/projects/:name', (req, res) => {
+
+    const project = req.params.name;
+    const choosenOne = projectsData.find(item => item.directory == project);
+
+    if(!choosenOne) {
+        return res.sendStatus(404);
+    }
+
+    if (!req.cookies["authenticated"]) {
+        res.cookie("redirect", "/");
+        res.redirect("/cookie");
+
+    } else {
+        res.render("description", {
+            layout: "main",
+            //data we're sending to our 'home' template
+            projectsData,
+            choosenOne,
+            helpers: {
+                toUpperCase(text) {
+                    return text.toUpperCase();
+                }
+            }
         });
     }
 });

@@ -1,38 +1,47 @@
 [
     {
         "title": "Spotify Search",
-        "directory": "/day_1_spotifysearch/"
+        "directory": "day_1_spotifysearch",
+        "description": "This is a description for my Spotify Search"
     },
     {
         "title": "Git Hub API",
-        "directory": "/github_api/"
+        "directory": "github_api",
+        "description": "This is a description for my Git Hub API"
     },
     {
         "title": "Incremental Search",
-        "directory": "/IncrementalSearch/"
+        "directory": "IncrementalSearch",
+        "description": "This is a description for my Incremental Search"
     },
     {
         "title": "JSON Validator",
-        "directory": "/json_validator/"
+        "directory": "json_validator",
+        "description": "This is a description for my JSON Validator"
     },
     {
         "title": "Image Carousal",
-        "directory": "/kitty_carousel_project/"
+        "directory": "kitty_carousel_project",
+        "description": "This is a description for my Image Carousal"
     },
     {
         "title": "Local Storage Notes",
-        "directory": "/local_storage/"
+        "directory": "local_storage",
+        "description": "This is a description for my Local Storage Notes"
     },
     {
         "title": "Translate Numbers to German",
-        "directory": "/numbers_to_german/"
+        "directory": "numbers_to_german",
+        "description": "This is a description for my Translate Numbers to German"
     },
     {
         "title": "Image Panes",
-        "directory": "/panes/"
+        "directory": "panes",
+        "description": "This is a description for my Image Panes"
     },
     {
         "title": "JavaScript Headlines Ticker",
-        "directory": "/ticker/"
+        "directory": "ticker",
+        "description": "This is a description for my JavaScript Headlines Ticker"
     }
 ]
