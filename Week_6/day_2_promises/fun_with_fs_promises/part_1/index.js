@@ -26,7 +26,7 @@ function logSizes (fullPath) {
                 }
             }
             return Promise.all(arr);
-        }).catch(err => console.log(err));
+        }).catch(err => console.log("Err in FS files: ", err));
 }
 
 logSizes(myPath).then( () => console.log("DONE"));

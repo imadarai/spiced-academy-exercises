@@ -54,14 +54,14 @@ module.exports.getToken = function(callback) {
 //                  GET TWEEITS                 //
 //                                              //
 // ///////////////////////////////////////////////
-module.exports.getTweets = function(bearerToken, callback) {
+module.exports.getTweets = function(bearerToken, twitterHandle, callback) {
     // this function will use the token to get tweets from twitter.
     // you will write this yourself :)
     // console.log('getTweets', bearerToken );
     const options = {
         method: 'GET',
         host: 'api.twitter.com',
-        path: '/1.1/statuses/user_timeline.json?screen_name=TheOnion&tweet_mode=extended',
+        path: `/1.1/statuses/user_timeline.json?screen_name=${twitterHandle}&tweet_mode=extended`,
         headers: {
             'Authorization': 'Bearer ' + bearerToken
         }
@@ -114,7 +114,7 @@ module.exports.filterTweets = function(tweetData) {
         const title = tweet.full_text.slice( 0,40);
 
         eachTweet.url = tweet.entities.urls[ 0 ].url;
-        eachTweet.title = `${title}...`;
+        eachTweet.title = `${title}...(${tweet.user.name})`;
         tickerTweets.push( eachTweet );
     });
 
